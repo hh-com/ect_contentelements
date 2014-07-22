@@ -1,0 +1,72 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+<?php if ($this->headline): ?>
+	<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+  
+<?php if ($this->itemtype): ?>
+<div itemscope itemtype="http://schema.org/<?php echo $this->itemtype; ?>" <?php if ($this->schemaOrgItemRef): ?> itemref="<?php echo ($this->schemaOrgItemRef); ?>"<?php endif; ?> >
+<?php endif; ?>
+
+	<?php if ($this->data['url'] && $this->data['name']): ?><a <?php if ($this->data['url']['referid']) echo $this->data['url']['referid']; ?> itemprop="url" href="<?php echo ($this->data['url']['value']) ?>"><?php endif; ?>
+	
+		<?php if ($this->data['name']): ?><span class="schema_pre pre_schemaOrg_name" <?php if ($this->data['name']['referid']) echo $this->data['name']['referid']; ?> itemprop="name"><?php echo ($this->data['name']['value']) ?></span><br><?php endif; ?>
+		
+	<?php if ($this->data['url'] && $this->data['name']): ?></a><?php endif; ?>
+	
+	
+   <?php if ($this->data['founder']): ?><?php echo ($this->data['founder']['pre']) ?> <span <?php if ($this->data['founder']['referid']) echo $this->data['founder']['referid']; ?> itemprop="founder"><?php echo ($this->data['founder']['value']) ?></span><br><?php endif; ?>
+   
+	<?php if ($this->data['description']): ?>
+	<div <?php if ($this->data['description']['referid']) echo $this->data['description']['referid']; ?> itemprop="description">
+		<?php echo ($this->data['description']['value']) ?>
+	</div>
+	<?php endif; ?>
+   
+	<?php if ($this->itemtypeAddress): ?>
+	<div itemscope itemprop="address" itemtype="http://schema.org/PostalAddress">
+	<?php endif; ?>
+		<?php if ($this->data['postOfficeBoxNumber']): ?>
+			<?php echo $this->data['postOfficeBoxNumber']['pre']; ?> <span <?php if ($this->data['postOfficeBoxNumber']['referid']) echo $this->data['postOfficeBoxNumber']['referid']; ?> itemprop="postOfficeBoxNumber"><?php echo $this->data['postOfficeBoxNumber']['value'] ?></span><br><?php endif; ?>
+		<?php if ($this->data['streetAddress']): ?>
+			<?php echo $this->data['streetAddress']['pre']; ?> <span <?php if ($this->data['streetAddress']['referid']) echo $this->data['streetAddress']['referid']; ?> itemprop="streetAddress"><?php echo ($this->data['streetAddress']['value']) ?></span><br><?php endif; ?>
+		<?php if ($this->data['postalCode']): ?>
+			<?php echo ($this->data['postalCode']['pre']) ?> <span <?php if ($this->data['postalCode']['referid']) echo $this->data['postalCode']['referid']; ?> itemprop="postalCode"><?php echo ($this->data['postalCode']['value']) ?></span><?php endif; ?>
+		<?php if ($this->data['addressLocality']): ?>
+			<?php echo ($this->data['addressLocality']['pre']) ?> <span <?php if ($this->data['addressLocality']['referid']) echo $this->data['addressLocality']['referid']; ?> itemprop="addressLocality"><?php echo ($this->data['addressLocality']['value']) ?></span><br><?php endif; ?>
+		<?php if ($this->data['addressRegion']): ?>
+			<?php echo ($this->data['addressRegion']['pre']) ?> <span <?php if ($this->data['addressRegion']['referid']) echo $this->data['addressRegion']['referid']; ?> itemprop="addressRegion"><?php echo ($this->data['addressRegion']['value']) ?></span><br><?php endif; ?>
+		<?php if ($this->data['addressCountry']): ?>
+			<?php echo ($this->data['addressCountry']['pre']) ?> <span <?php if ($this->data['addressCountry']['referid']) echo $this->data['addressCountry']['referid']; ?> itemprop="addressCountry"><?php echo ($this->data['addressCountry']['value']) ?></span><br><?php endif; ?>
+	<?php if ($this->itemtypeAddress): ?>
+	</div>
+	<?php endif; ?>
+	
+	<?php if ($this->data['email']): ?>
+		<?php echo ($this->data['email']['pre']) ?> <a href="mailto:<?php echo ($this->data['email']['value']) ?>" title="<?php echo ($this->data['email']['value']) ?>"><span <?php if ($this->data['email']['referid']) echo $this->data['email']['referid']; ?> itemprop="email"><?php echo ($this->data['email']['value']) ?></span></a><br><?php endif; ?>
+		<?php if ($this->data['url']): ?>
+		<?php echo ($this->data['url']['pre']) ?> <a href="<?php echo ($this->data['url']['value']) ?>" title="<?php echo ($this->data['url']['value']) ?>"><span <?php if ($this->data['url']['referid'] && !$this->data['name']) echo $this->data['url']['referid']; ?> itemprop="url"><?php echo ($this->data['url']['name']) ?></span></a><br><?php endif; ?>
+	<?php if ($this->data['telephone']): ?>
+		<?php echo ($this->data['telephone']['pre']) ?> <span <?php if ($this->data['telephone']['referid']) echo $this->data['telephone']['referid']; ?> itemprop="telephone">	<?php echo ($this->data['telephone']['value']) ?></span><br><?php endif; ?>
+	<?php if ($this->data['faxNumber']): ?>
+		<?php echo ($this->data['faxNumber']['pre']) ?> <span <?php if ($this->data['faxNumber']['referid']) echo $this->data['faxNumber']['referid']; ?> itemprop="faxNumber">	<?php echo ($this->data['faxNumber']['value']) ?></span><br><?php endif; ?>	
+	<?php if ($this->data['taxID']): ?>
+		<?php echo ($this->data['taxID']['pre']) ?> <span <?php if ($this->data['taxID']['referid']) echo $this->data['taxID']['referid']; ?> itemprop="taxID">	<?php echo ($this->data['taxID']['value']) ?></span><br><?php endif; ?>
+	<?php if ($this->data['fbgericht']): ?>
+		<?php echo ($this->data['fbgericht']['pre']) ?> <span><?php echo ($this->data['fbgericht']['value']) ?></span><br><?php endif; ?>
+	<?php if ($this->data['vatID']): ?>
+		<?php echo ($this->data['vatID']['pre']) ?> <span <?php if ($this->data['vatID']['referid']) echo $this->data['vatID']['referid']; ?> itemprop="vatID">	<?php echo ($this->data['vatID']['value']) ?></span><br><?php endif; ?>
+	<?php if ($this->data['birthDate']): ?>
+		<?php echo $GLOBALS['TL_LANG']['tl_content']['schemaOrg_bithday'] ?><meta itemprop="birthDate" content="<?php echo $this->parseDate("Y-m-d", $this->data['birthDate']['value']) ?>">
+			<?php echo $this->parseDate("d. F Y", $this->data['birthDate']['value']) ?><br><?php endif; ?>	
+			
+	<?php if ($this->data['image']): ?>
+		<img <?php if ($this->data['image']['referid']) echo $this->data['image']['referid']; ?> <?php if ($this->data['image']['size']) echo $this->data['image']['size']; ?> itemprop="<?php echo $this->imageProp; ?>" src="<?php echo ($this->data['image']['value']); ?>" alt="" /><br><?php endif; ?>
+
+	<?php echo ($this->data['htmlContainer']['value']) ?>
+
+<?php if ($this->itemtype): ?>
+</div>
+<?php endif; ?>
+
+</div>
