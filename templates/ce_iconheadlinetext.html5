@@ -6,9 +6,7 @@
 		<?php if ($this->isAbove): ?>
 			<span class="fIcon <?php echo $this->iconClass; ?>"></span>
 		<?php endif; ?>
-		
 				<?php echo $this->headline; ?>
-				
 		<?php if (!$this->isAbove): ?>
 			<span class="fIcon <?php echo $this->iconClass; ?>"></span>
 		<?php endif; ?>
