@@ -16,9 +16,11 @@ class ContentIconHeadlineText extends \ContentElement
 
 	protected function compile()
 	{
-		# Icon Default Backend & Frontend CSS 
-		$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/css/fontIcon.css';
-		
+		# Icon Default & Frontend CSS 
+		$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/css/fontIcon.css||static';
+		$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome.min.css||static';
+                $GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome-social.min.css||static';
+    
 		$iconClass = 'fas_'.$this->id;
 			
 		$isLink = false;

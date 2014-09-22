@@ -250,10 +250,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['schemaOrgItemRef'] = array
  /* Icon Headline */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['IconHeadlineText'] = '{type_legend},type,headline;{icon_legend},iconSelect,floating,centerIcon,iconSize,iconRotate;{link_legend},url,target;{text_legend},text;{protected_legend:hide},protected;{expert_legend:hide},guests,invisible,cssID,space';
 
-# Include font-awesome.css in Frontend and Backend
-$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome.min.css||static';
-$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome-social.min.css||static';
-
 $GLOBALS['TL_DCA']['tl_content']['fields']['iconSelect'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['iconSelect'],

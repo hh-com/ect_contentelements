@@ -54,8 +54,11 @@ class IconSelect extends \Widget
 				';	
 		}
 		# Font AWESOME END
-		
+                
+                # Backend: Icon Font Default Layout & Frontend CSS 
 		$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/css/fontIcon_Backend.css';
+                $GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome.min.css';
+                $GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome-social.min.css';
 		$GLOBALS['TL_MOOTOOLS'][] = '<style>
 			'.$css.'
 		</style>';
