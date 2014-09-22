@@ -8,6 +8,10 @@
  *
 */
 
+# Include font-awesome.css in Frontend and Backend -> 
+$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome.min.css||static';
+$GLOBALS['TL_CSS'][] = 'system/modules/ect_contentelements/assets/fontawesome/css/font-awesome-social.min.css||static';
+                
 # Widget
 $GLOBALS['BE_FFL']['iconSelect'] = 'IconSelect';
 
