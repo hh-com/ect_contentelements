@@ -22,6 +22,7 @@ $GLOBALS['TL_DCA']['tl_content']['subpalettes']['schemaOrgType_organization'] =
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['schemaOrgType_single'] =
 (	'schemaOrg_name,schemaOrg_birthDate,schemaOrg_founder,schemaOrg_email,schemaOrg_url,schemaOrg_description,schemaOrg_address_postOfficeBoxNumber,schemaOrg_address_streetAddress,schemaOrg_address_postalCode,schemaOrg_address_addressLocality,schemaOrg_address_addressRegion,schemaOrg_address_addressCountry,schemaOrg_telephone,schemaOrg_faxNumber,schemaOrg_taxID,schemaOrg_fbgericht,schemaOrg_vatID;{schemaImage_legend:hide},schemaOrg_image, size;schemaOrg_htmlContainer;'
 );
+
 $GLOBALS['TL_DCA']['tl_content']['fields']['schemaOrgType'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['schemaOrgType'],
@@ -293,6 +294,22 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['ECTStripline'] = '{type_legend},ty
 $GLOBALS['TL_DCA']['tl_content']['fields']['floating']['load_callback'][] = array('tl_content_ect_ext', 'changeLangText');
 $GLOBALS['TL_DCA']['tl_content']['fields']['text']['load_callback'][] = array('tl_content_ect_ext', 'removeTextMandatory');
 $GLOBALS['TL_DCA']['tl_content']['fields']['url']['load_callback'][] = array('tl_content_ect_ext', 'removeTextMandatory');
+
+/* Contenttype List -> FontIcon*/
+$GLOBALS['TL_DCA']['tl_content']['palettes']['list'] = str_replace('listitems;', 'listitems;{icon_legend},iconShow,iconSelect;', $GLOBALS['TL_DCA']['tl_content']['palettes']['list']);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['iconShow'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['iconShow'],
+	'exclude'                 => true,
+	'filter'                  => true,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('tl_class'=>'m12'),
+	'sql'                     => "char(1) NOT NULL default ''"
+);
+
+
+
 
 class tl_content_ect_ext extends Backend
 {	

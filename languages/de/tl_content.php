@@ -71,4 +71,6 @@
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_image'] = array('Image/Logo','W&auml;hlen Sie ein Image/Logo im endg&uuml;ltigen Format aus.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_htmlContainer'] = array('Individueller HTML-Code','Fügen Sie Ihren individuellen HTML-Code ein. Achten Sie auf "Erlaubte HTML-Tags" und erweitern Sie bei Bedarf die Einstellungen. Generatoren: http://www.microdatagenerator.com oder http://microdatagenerator.org');
 	
+        $GLOBALS['TL_LANG']['tl_content']['iconShow']   = array('Icon anzeigen', 'Gibt bei dieser Liste ein FontIcon aus.');
+        
 ?>

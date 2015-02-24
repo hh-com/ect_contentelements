@@ -19,4 +19,8 @@ $GLOBALS['BE_FFL']['iconSelect'] = 'IconSelect';
 $GLOBALS['TL_CTE']['contentElements']['IconHeadlineText'] = 'ContentIconHeadlineText';
 $GLOBALS['TL_CTE']['contentElements']['SchemaOrg'] = 'ContentSchemaOrg';
 $GLOBALS['TL_CTE']['contentElements']['ECTStripline'] = 'ContentECTStripline';
+
+# Add FontAwesome to CE List
+$GLOBALS['TL_HOOKS']['getContentElement'][] = array('XtndElements', 'addClass2List');
+
 ?>

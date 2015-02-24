@@ -15,7 +15,7 @@ class ContentSchemaOrg extends \ContentElement
 	protected $strTemplate = 'ce_schemaorg';
 	
 	protected function compile()
-	{
+	{ 
 		# This Schema.org Module should be very EASY TO USE! So there are just PERSON and ORGANISATION ATM
 		$itemtype = false;
 		$this->Template->itemtypeAddress = false;
