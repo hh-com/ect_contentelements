@@ -50,10 +50,7 @@ class XtndElements extends Frontend
                 $strBuffer = $objElement->Template->parse();
             }
         }
-       
-       
-       
-     return $strBuffer."hf hlkj hlkjh flkjh afslkjh ldfsakh lkaj hjk";
+     return $strBuffer;
     }
     
     private function checkRecursive($cteAlias, $cteId)
