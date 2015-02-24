@@ -16,7 +16,7 @@
  li.fIcon
  {
 	display: block;
-	line-height: normal;
+	line-height: inherit;
 	margin: auto;
 }
 .ce_IconHeadlineText .centerIcon
