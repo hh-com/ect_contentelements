@@ -12,10 +12,15 @@ class XtndElements extends Frontend
 {
     public function addClass2List(ContentModel $objModel, $strBuffer, $objElement)
     {
-        
-        if ($objModel->type == "alias")
-            $objModel = $this->checkRecursive($objModel->cteAlias, $objModel->id);
 
+        if ( $objModel->cteAlias != 0)
+        {
+            $objModel = $this->checkRecursive($objModel->cteAlias, $objModel->id);
+            $strClass = \ContentElement::findClass($objModel->type);                 
+            $objElement = new $strClass($objModel, "main");
+            $objElement->generate();
+        }
+       
         if ($objModel->type == "list")
         {
             if($objModel->iconShow == 1)
@@ -48,6 +53,7 @@ class XtndElements extends Frontend
                 $objElement->Template->class = $objElement->Template->class." ficon_list";
                 
                 $strBuffer = $objElement->Template->parse();
+              
             }
         }
      return $strBuffer;
@@ -57,30 +63,15 @@ class XtndElements extends Frontend
     {
         $cteId;
         $objRow = \ContentModel::findByPk($cteAlias);
-        if ($objRow->type != "alias")
-           return $objRow;
         
+        if ($objRow->cteAlias == 0)
+           return $objRow;
+
         $cteId = $objRow->cteAlias;
-        $this->checkRecursive($objRow->type, $objRow->cteAlias, $objRow->id);
+        $this->checkRecursive($objRow->cteAlias, $objRow->id);
 
         return \ContentModel::findByPk($cteId);  
     }
-    
-    public function addClass2Listxxx($strContent, $strTemplate)
-    {
-        
-            
-            
-        if ($strTemplate == 'ce_list')
-        {
-            echo $strContent;
-           
-            // Ausgabe modifizieren
-        }
-
-        return $strContent;
-    }
-    
     
 }
 ?>
