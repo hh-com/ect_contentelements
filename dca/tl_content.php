@@ -3,7 +3,7 @@
 /**
  * 
  * @package ect_contentelements
- * Copyright (C) 2014 Harald Huber
+ * Copyright (C) 2015 Harald Huber
  * http://www.harald-huber.com
  *
 */
@@ -244,7 +244,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['schemaOrgItemRef'] = array
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'text',
-	'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50 m12'),
+	'eval'                    => array('maxlength'=>255, 'tl_class'=>'long m12'),
 	'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
@@ -295,7 +295,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['floating']['load_callback'][] = arra
 $GLOBALS['TL_DCA']['tl_content']['fields']['text']['load_callback'][] = array('tl_content_ect_ext', 'removeTextMandatory');
 $GLOBALS['TL_DCA']['tl_content']['fields']['url']['load_callback'][] = array('tl_content_ect_ext', 'removeTextMandatory');
 
-/* Contenttype List -> FontIcon*/
+/* Add FontIcon to Contentelement List*/
 $GLOBALS['TL_DCA']['tl_content']['palettes']['list'] = str_replace('listitems;', 'listitems;{icon_legend},iconShow,iconSelect;', $GLOBALS['TL_DCA']['tl_content']['palettes']['list']);
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['iconShow'] = array
@@ -307,9 +307,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['iconShow'] = array
 	'eval'                    => array('tl_class'=>'m12'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
-
-
-
 
 class tl_content_ect_ext extends Backend
 {	

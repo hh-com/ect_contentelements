@@ -3,7 +3,7 @@
 /**
  * 
  * @package ect_contentelements
- * Copyright (C) 2014 Harald Huber
+ * Copyright (C) 2015 Harald Huber
  * http://www.harald-huber.com
  *
 */
@@ -19,6 +19,12 @@ $GLOBALS['BE_FFL']['iconSelect'] = 'IconSelect';
 $GLOBALS['TL_CTE']['contentElements']['IconHeadlineText'] = 'ContentIconHeadlineText';
 $GLOBALS['TL_CTE']['contentElements']['SchemaOrg'] = 'ContentSchemaOrg';
 $GLOBALS['TL_CTE']['contentElements']['ECTStripline'] = 'ContentECTStripline';
+
+/**
+ * Front end modules
+ */
+$GLOBALS['FE_MOD']['ect']['ectheader'] = 'ModuleECTHeader';
+
 
 # Add FontAwesome to CE List
 $GLOBALS['TL_HOOKS']['getContentElement'][] = array('XtndElements', 'addClass2List');

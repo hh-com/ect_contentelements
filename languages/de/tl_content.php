@@ -63,7 +63,7 @@
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_address_addressCountry'] = array('Land','Tragen Sie hier das Land ein.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_email'] = array('E-Mail','Tragen Sie hier die E-Mailadresse ein.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_telephone'] = array('Telefon (Format: 0041 666 123456789)','Tragen Sie hier die Telefonnummer ein.');
-	$GLOBALS['TL_LANG']['tl_content']['schemaOrgItemRef'] = array('Referenz ID\'s','Tragen Sie hier Referenz-ID\'s zu Items au&szlig;erhalb des Schemas ein. Vermeiden Sie doppelte Elemente auf einer Seite! Die ID des gewünschten Elements finden Sie im Quellcode.');
+	$GLOBALS['TL_LANG']['tl_content']['schemaOrgItemRef'] = array('Referenz ID\'s','Tragen Sie hier Referenz-ID\'s zu Items au&szlig;erhalb des Schemas ein. Vermeiden Sie doppelte Elemente auf einer Seite! Die ID des gewünschten Elements finden Sie im Quellcode. Für das Logo im Header verwenden tragen Sie die ID "ect_logoImage" ein.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_faxNumber'] = array('Faxnummer','Tragen Sie hier die Faxnummer ein.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_taxID'] = array('Firmenbuchnummer','Tragen Sie hier die Firmenbuchnummer  ein.');
 	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_fbgericht'] = array('Firmenbuchgericht','Tragen Sie hier das Firmenbuchgericht ein. (Kein Schema!)');

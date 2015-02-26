@@ -3,16 +3,19 @@
 /**
  * 
  * @package ect_contentelements
- * Copyright (C) 2014 Harald Huber
+ * Copyright (C) 2015 Harald Huber
  * http://www.harald-huber.com
  *
 */
 
 class XtndElements extends Frontend
 {
+    /*
+     * Hook getContentElement
+     * Add Class for FontAwesome to CtE List
+     */
     public function addClass2List(ContentModel $objModel, $strBuffer, $objElement)
     {
-
         if ( $objModel->cteAlias != 0)
         {
             $objModel = $this->checkRecursive($objModel->cteAlias, $objModel->id);
@@ -53,7 +56,6 @@ class XtndElements extends Frontend
                 $objElement->Template->class = $objElement->Template->class." ficon_list";
                 
                 $strBuffer = $objElement->Template->parse();
-              
             }
         }
      return $strBuffer;
