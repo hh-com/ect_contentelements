@@ -12,7 +12,6 @@ Adds the following elements:
 5) Header Modul<br>
 <ul>
 <li>Insert Logo</li>
-<li></li>
 <li>Insert Phone and Adress Link</li>
 <li>Insert Social Media Buttons</li>
 <li>Insert own html code</li>
