@@ -68,20 +68,5 @@ $GLOBALS['TL_LANG']['tl_module']['ectsocials_mail'][1] = "Tragen Sie hier Ihre E
 
 $GLOBALS['TL_LANG']['tl_module']['ectsocials_html'][0] = "HTML Code";
 $GLOBALS['TL_LANG']['tl_module']['ectsocials_html'][1] = "Tragen Sie hier eigenen HTML Code ein. Er wird nach den Header-Elementen ausgegeben.";
-
-	
-	$GLOBALS['TL_LANG']['tl_content']['schemaOrg_name'] = array('Name (Beschreibung/Name)','Tragen Sie den Namen ein.');
-	$GLOBALS['TL_LANG']['tl_content']['schemaOrgTypeOfOrganisation'] = array('Organisations Typ','Bitte wählen Sie den gewünschten Type aus.');
-	$GLOBALS['TL_LANG']['tl_content']['schemaOrgTypeOfOrganisationOption'] = array (
-		'Organization' => "Generell",
-		'LocalBusiness' => "Lokales Gewerbe",
-		'NGO' => "NGO",
-		'Corporation' => "Gesellschaft",
-		'GovernmentOrganization' => "Staatlich",
-		'EducationalOrganization' => "Schule",
-		'SportsTeam' => "Sport Team",
-		'PerformingGroup' => "Performing Group"
-	);
-	
         
 ?>

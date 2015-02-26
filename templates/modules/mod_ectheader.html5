@@ -2,14 +2,10 @@
 <div class="mod_ectheader">
     
     <div class="logo">
-        <a href="#" title="<?php echo ($this->ect_hlogo_text); ?>">
-           
-                <img alt="<?php echo ($this->ect_hlogo_text); ?>" src="<?php echo ($this->hlogo->path); ?>" itemprop="image" id="ect_logoImage">
-
-         
+        <a href="#" title="<?php echo ($this->ect_hlogo_text); ?>">        
+            <img alt="<?php echo ($this->ect_hlogo_text); ?>" src="<?php echo ($this->hlogo->path); ?>" itemprop="image" id="ect_logoImage">
         </a>
     </div>
-    
     
     <div class="social">
         <?php if ($this->ectsocials_show): ?>

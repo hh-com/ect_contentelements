@@ -3,7 +3,7 @@
 /**
  * 
  * @package ect_contentelements
- * Copyright (C) 2014 Harald Huber
+ * Copyright (C) 2015 Harald Huber
  * http://www.harald-huber.com
  *
 */

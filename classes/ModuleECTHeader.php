@@ -16,30 +16,6 @@ class ModuleECTHeader extends \Module
     */
     protected $strTemplate = 'mod_ectheader';
     
-    public function fvffgenerate()
-    {
-        if (TL_MODE == 'BE')
-        {
-            $objTemplate = new BackendTemplate('be_wildcard');
-
-            $objTemplate->wildcard = '### PAGE IMAGE ###';
-            $objTemplate->title = $this->headline;
-            $objTemplate->id = $this->id;
-            $objTemplate->link = $this->name;
-            $objTemplate->href = 'typolight/main.php?do=modules&amp;act=edit&amp;id=' . $this->id;
-
-            return $objTemplate->parse();
-        }
-
-        $strBuffer = parent::generate();
-
-        if ($this->Template->src == '') {
-            return '';
-        }
-
-        return $strBuffer;
-    }
-    
     protected function compile()
     {  
        
@@ -56,8 +32,9 @@ class ModuleECTHeader extends \Module
             
         }
         
-
-         #var_dump($objFile);
+         /*
+         *  Todo: Sticky  Header
+         */
         
     }
     
